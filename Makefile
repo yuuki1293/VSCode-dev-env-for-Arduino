@@ -1,19 +1,25 @@
-AC = arduino-cli
-AFLAGS = --fqbn
-BOARD = arduino:avr:uno
-PORT = /dev/ttyUSB0
-MODULES = src
+AC := arduino-cli
+AFLAGS := --fqbn
+BOARD := arduino:avr:uno
+PORT := /dev/ttyUSB0
+SRC := src
+
+ifeq ($(OS),Windows_NT)
+    SETUP_SC := powershell -ExecutionPolicy Bypass .\setup-arduino-cli
+else
+    SETUP_SC := ./setup-arduino-cli.sh
+endif
 
 all: compile
 
-compile: $(MODULES)/src.ino
-	$(AC) compile $(AFLAGS) $(BOARD) $(MODULES)
+compile: $(SRC)/$(SRC).ino
+	$(AC) compile $(AFLAGS) $(BOARD) $(SRC)
 
-upload: $(MODULES)/src.ino
-	$(AC) upload $(AFLAGS) $(BOARD) -p $(PORT) $(MODULES)
+upload: $(SRC)/$(SRC).ino
+	$(AC) upload $(AFLAGS) $(BOARD) -p $(PORT) $(SRC)
 
 setup:
-	./setup-arduino-cli.ps1
+	$(SETUP_SC)
 
 clean:
 	rm -f *.o main
