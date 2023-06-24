@@ -4,5 +4,6 @@
     },
     "terminal.integrated.env.linux": {
         "PATH": "${env:PATH}:${workspaceFolder}/bin"
-    }
+    },
+    "C_Cpp.intelliSenseEngine": "Tag Parser"
 }
