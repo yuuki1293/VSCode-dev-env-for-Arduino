@@ -84,7 +84,6 @@
                 "ARDUINO_ARCH_AVR",
                 "USBCON"
             ],
-            "compilerPath": "gcc",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "linux-gcc-x64",
