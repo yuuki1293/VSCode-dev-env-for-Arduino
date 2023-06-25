@@ -1,10 +1,10 @@
 AC := arduino-cli
 AFLAGS := --fqbn
 BOARD := arduino:avr:uno
-PORT := /dev/ttyUSB0
+PORT := COM3
 SRC := src
 
-ifeq ($(OS),Windows_NT)
+ifeq ($(OS), Windows_NT)
     SETUP_SC := powershell -ExecutionPolicy Bypass .\setup-arduino-cli
 else
     SETUP_SC := ./setup-arduino-cli.sh
