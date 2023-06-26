@@ -57,4 +57,3 @@ To upload the program, run the following command:
 ```shell
 make upload
 ```
-
