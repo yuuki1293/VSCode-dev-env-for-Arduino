@@ -31,7 +31,7 @@ arduino-cli core install arduino:avr
 
 ### Writing source code
 The `setup` and `loop` functions can be written in [`main.cpp`](src/main.cpp) or in a separate file by yourself.  
-You can add other c/c++ source file bellow the [src](src) folder.  
+You can add other c/c++ source files bellow the [src](src) folder.  
 > Note: The [`src.ino`](src/src.ino) file is a dummy. It is recommended not to write anything in it.
 
 ### Compile
