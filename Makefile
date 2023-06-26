@@ -1,7 +1,8 @@
+PORT := COM3
+BOARD := arduino:avr:uno
+
 AC := arduino-cli
 AFLAGS := --fqbn
-BOARD := arduino:avr:uno
-PORT := COM3
 SRC := src
 
 ifeq ($(OS), Windows_NT)
