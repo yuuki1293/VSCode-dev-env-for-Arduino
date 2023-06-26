@@ -48,7 +48,7 @@ arduino-cli board list
 ```
 Remember the serial port to which the Arduino is supposed to be connected.  
 
-Write the serial port in the port of the [Makefile](Makefile) file. example:
+Write the serial port in the `PORT` of the [Makefile](Makefile) file. example:
 ```
 PORT := COM1
 ```
